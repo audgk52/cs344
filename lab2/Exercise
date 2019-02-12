@@ -1,0 +1,67 @@
+Myungha Kim
+CS344
+Professor Vanderlinden
+February 11th 2019
+
+Exercise 2.1
+
+1. Which of the local search algorithms solves the problem? How well does each algorithm do?
+
+Both hill climbing and simulated annealing seem to solve the problem at the different speed.
+
+2. Which algorithm works more quickly?
+
+Simulated annealing algorithm works slower than hill climbing algorithm
+
+3. Does the starting value for x make any difference? Why or why not?
+
+It is not clearly observed, but theoretically if the starting value for x is closer to the result (highest value), it should take less time to find the result compared to starting farther from the result.
+
+4. What effect does changing the delta step value make on each algorithm? Why?
+
+delta step determines the amount of change in initial state in regard to x to find the highest value the algorithm can find. Thus, if the delta step values changes, x numbers in any direction to find value changes which makes the highest value to be found changes.
+
+5. What is the purpose of the exp_schedule() method in the simulated annealing function call?
+
+exp_schedule() method is to set the boundaries of search network in the simulated annealing. It assigns the k, lam, and limit value to the algorithm. The k value gives the algorithm set search window by determining size of steps and limit value gives it the search boundary in regard to x number.
+
+
+Exercise 2.2
+
+1.How do each of the algorithms do on this problem space? Why?
+Hill climbing algorithm is only finding the higher value (better result) while simulated annealing algorithm is willing to take the worse result to get to the global highest peak instead of limiting it in local area. They both solve the problem and hill climbing algorithm works faster than the simulated annealing algorithm.
+
+2. Does the starting value make any difference here?
+Starting value does not seem to make huge difference in the resulting value and the time to search for it. There is a similar pattern throughout which the starting value and the resulting value are close within small margin. But again, theoretically if the starting value for x is closer to the result (highest value), it should take less time to find the result compared to starting farther from the result.
+
+3. Does modifying the step size (i.e., delta) affect the operation of the two algorithms? Why or why not?
+Yes, it does affect the operation of the two algorithms. For simulated annealing algorithm, the step size gives wider window to search for the maximum value for both algorithms so that the probability of finding better value than searching in a smaller window. For hill climbing algorithm, it changes the x value to search for the y values to choose the local maximum.
+
+
+4. What are the maximum and minimum possible values here, and how do the two algorithms score with respect to them?
+Minimum possible value should be 0. Maximum possible value is not defined. The initial value is affected by the set maximum value, but the values for hill climbing and simulated annealing solution are not affected by it since the SineVariant equation does not take maximum as a parameter. Also, the variance of values is strongly determined by the step size.
+
+Exercise 2.3
+1.How does each algorithm do with these restarts? Why?
+
+The reason to restart the algorithm is that local search can hit the local minima, so by restarting with different initial point, it can create more possibility to find the maximum value that we eventually want to search for. Each algorithm with for loop of iterating 20 times, the value and initial x value are stored in a dictionary created as a key value pair. Within the dictionary, it stores the maximum key value which is the value into a variable created. And with the maximum key found, the value which is x value can be found with that maximum key.
+
+
+2.What are the average values of the runs for each of the algorithms?
+
+For abs.py, the average value of the runs is 15 for both hill climbing and simulated annealing algorithm which is constantly observed. But, for sine.py, it is hard to determine the average value of the runs since the variance between the values both algorithms find is huge.
+
+3.If one of the algorithms does better, explain why; if not, explain why not.
+
+For abs.py, hill climbing algorithm is finding it better than simulated annealing algorithm since it takes less time to find the value. However, for sine.py, simulated annealing algorithm is better since it finds higher value (which would be our goal to find closest value to global maximum) than what hill climbing algorithm finds even though it takes longer time to find value.
+Exercise 2.4
+1.For which algorithm does beam search make the most sense?
+It makes the most sense for simulated annealing algorithm to use beam search. Simulated annealing algorithm can find the “worse” value if that value can lead to find the global maximum. Thus, beam search can narrow down the options to find the global maximum by lessening the number of “worse” values.
+
+2.How many solutions could you maintain with reasonable space and time constraints?
+I believe since beam search is sorting the search tree according to increasing order of heuristic cost and stores the best states at each level of tree. Since it is eliminating the possible states at each level and only selecting the best ones, it will eventually end up with one final best solution for the problem.
+
+3.How would you modify the code to implement beam search? How is it different from random restarts, if at all?
+Instead of finding maximum y value out of randomly iterated set of values which the random restarts, beam search would find the best x value which has the lowest heuristic cost that can lead to the goal in which the global maximum.
+
+

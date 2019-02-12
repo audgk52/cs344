@@ -37,6 +37,8 @@ class SineVariant(Problem):
 if __name__ == '__main__':
     # Formulate a problem with a 2D hill function and a single maximum value.
 
+    # setting up the variables to creat dictionary with solution values and x value as key value pair,
+    # and variables to be assigned with maxValue of list for each algorithm
     hill_max = {}
     annealing_max = {}
     hill_maxValue = 0
@@ -50,6 +52,7 @@ if __name__ == '__main__':
         # Solve the problem using hill-climbing.
         start1 = time.time()
         hill_solution = hill_climbing(p)
+        # adding key value pair to dictionary
         hill_max[p.value(hill_solution)] = hill_solution
         end1 = time.time()
 
@@ -59,10 +62,11 @@ if __name__ == '__main__':
             p,
             exp_schedule(k=20, lam=0.005, limit=1000)
         )
+        # adding key value pair to dictionary
         annealing_max[p.value(annealing_solution)] = annealing_solution
         end2 = time.time()
 
-        # find the max key value (y value) in the dictionary for each algorithm and assign it to maxValue variable
+    # find the max key value (y value) in the dictionary for each algorithm and assign it to maxValue variable
     hill_maxValue = max(hill_max.keys())
     annealing_maxValue = max(annealing_max.keys())
 

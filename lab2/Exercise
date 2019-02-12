@@ -54,6 +54,8 @@ For abs.py, the average value of the runs is 15 for both hill climbing and simul
 3.If one of the algorithms does better, explain why; if not, explain why not.
 
 For abs.py, hill climbing algorithm is finding it better than simulated annealing algorithm since it takes less time to find the value. However, for sine.py, simulated annealing algorithm is better since it finds higher value (which would be our goal to find closest value to global maximum) than what hill climbing algorithm finds even though it takes longer time to find value.
+
+
 Exercise 2.4
 1.For which algorithm does beam search make the most sense?
 It makes the most sense for simulated annealing algorithm to use beam search. Simulated annealing algorithm can find the “worse” value if that value can lead to find the global maximum. Thus, beam search can narrow down the options to find the global maximum by lessening the number of “worse” values.

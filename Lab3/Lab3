@@ -1,0 +1,105 @@
+Exercise 3.1
+
+a.
+1) For Figure 6.4.b (solved one), all the algorithm works in a good timely manner since it is already solved
+figured.
+2) For Figure 6.4.a (easy one), depth_first_graph_search failed to solve the problem after taking 50
+seconds. AC3 algorithm solves the puzzle in 0.019 seconds. Backtracking algorithm also solves the puzzle
+in 6.056 seconds. Min_conflicts algorithm did not solve the problem while it took the longest time, 64.321
+seconds.
+3) For harder version, depth_first_graph_search took too long to show the result of it solving the
+puzzle or failing to solve (I assume it failed to solve the problem). AC3 algorithm failed to solve the puzzle
+after taking 0.022 seconds. Backtracking algorithm took too long to show the result as well as depth_first_search
+(assume that it failed to solve the problem). Min_conflicts algorithm failed to solve the problem after taking
+62.649 seconds.
+4) For the hardest one, depth_first_graph search and AC3 failed to solve the puzzle, backtracking and Min_conflicts
+solved the problem within 62 seconds.
+
+
+Overall, DFS algorithm does not work on any of the predefined puzzle since the algorithm follows one path out of all in
+the search tree which decreases the chance of selecting the right path by far from the beginning.
+Interesting to note here is that backtracking and min_conflicts algorithm solved the hardest version while they failed
+to solve the harder one. I believe that it is because backtracking and min_conflicts algorithm choose the node randomly,
+which makes that the chances of solving the problem random as well. And it happened to choose the right nodes when the
+algorithms were solving the hardest version.
+
+
+b.
+For figure 6.4.a (easy one)
+backtracking_search(puzzle) = 6.214 sec
+backtracking_search(puzzle, select_unassigned_variable=mrv) = 77.978 sec
+backtracking_search(puzzle, inference = forward_checking) = 0.010 sec
+backtracking_search(puzzle, select_unassigned_variable=mrv, inference = forward_checking) = 0.004 sec
+
+inference should work the best for sudoku. The combination of using both minimum-remaining-values and
+forward_checking works the best for sudoku with the least amount of time to solve the puzzle.
+
+
+
+
+
+
+
+
+
+Exercise 3.2
+a.
+I set up the size of n to increase by multiply of 10.
+AC3: Failing every try
+Backtracking: 10
+min_conflicts : 1000
+
+Backtracking is a recursive algorithm where all possible values are assigned to initially unassigned variables at each
+step randomly which takes up a lot of space and time to go through large size of n.
+Min_conflicts algorithm on the other hand, after selecting random variables from the set with conflicts, and assigns the
+value to the variable which minimizes the number of conflicts on the variable. Since it does some sort of pruning process,
+it is able to handle larger size of n than backtracking.
+
+
+b.
+When n = 1
+1) solution = backtracking_search(problem) : 2.241e-05 sec
+2) solution = backtracking_search(problem, select_unassigned_variable=mrv) : 3.099-05 sec
+3) solution = backtracking_search(problem, inference=forward_checking) : 3.529e-05 sec
+4) solution = backtracking_search(problem, select_unassigned_variable=mrv, inference=forward_checking) : 3.314e-05
+
+When n = 9
+1) solution = backtracking_search(problem) : 0.0009 sec
+2) solution = backtracking_search(problem, select_unassigned_variable=mrv) : 0.0013 sec
+3) solution = backtracking_search(problem, inference=forward_checking) : 0.0008 sec
+4) solution = backtracking_search(problem, select_unassigned_variable=mrv, inference=forward_checking) : 0.0007 sec
+
+when n = 99
+1) solution = backtracking_search(problem) : (failed)
+2) solution = backtracking_search(problem, select_unassigned_variable=mrv) : (failed)
+3) solution = backtracking_search(problem, inference=forward_checking) : (failed)
+4) solution = backtracking_search(problem, select_unassigned_variable=mrv, inference=forward_checking) : 0.0615 sec
+
+Combination of minimum-remaining-values and forward_checking works the best in all different size of n.
+Because setting the minimum-remaining-value ranks the variable but also does the pruning from the set value determined
+by mrv function to cut off the values that are not going to be searched through, which makes the search range smaller.
+Within that range, forward_checking detects inevitable failure variables from the range which makes the search range even
+smaller to look through.
+
+
+c.
+Depending on the n, the number of steps that the algorithm requires varies. However, the algorithm follows an iterative
+process of setting up the current state with an initial assignment of values for the variables in the csp, randomly
+choosing a variable from set of conflicted variables (csp), assigning value to the variable that can minimized the number
+of conflicts, and changing the current state with that variable with assigned value.
+
+
+
+
+Exercise 3.3
+a.
+Both CSP and traditional problems are methods of searching for the right results. However, the formulation of methods are
+different between CSP an traditional problems. Traditional problems are formulated with 5 different sections which are
+initial state, actions, transitional model, cost function, and goal test. On the other hand, CSP is consisted of set of
+variables with conflicts violating on or more constraints, domain which is the set of legal values, and set of constraints
+that are applied on the variables.
+
+b.
+Heuristic deployed in CSP is that
+
+

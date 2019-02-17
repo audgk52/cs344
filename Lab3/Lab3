@@ -100,6 +100,11 @@ variables with conflicts violating on or more constraints, domain which is the s
 that are applied on the variables.
 
 b.
-Heuristic deployed in CSP is that
+Nature of heuristics deployed in both search algorithms to rank alternatives in search algorithms at each brancing 
+step based on avaibale information to decide which branch to follow. In traditional search algorithms, the heuristic tries 
+every possibility at each step, and it stops the serach at any time if the current possibility is already worse than the bests
+solution already found. It can also eliminate the bad paths early if it try good choices first. Heuristic in constraint satisfaction
+search algorithm, heuristic functions are optimizing the search process by 
+
 
 

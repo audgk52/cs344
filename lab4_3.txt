@@ -1,0 +1,40 @@
+1. Drug testing
+
+i. P(User) = <0.089, 0.911>
+
+ii. P(test | user) = 0.99
+
+iii. P(-test | user) = 0.01
+
+iv. P(test | -user) = 0.02
+
+v. P(User | test) = <P(user | test), P(-user | test)>
+
+    P(user | test) = P(user) * P(test | user) / P(test)
+                   = (0.089 * 0.99) / (0.99 + 0.02)
+                   = 0.087
+
+    P(-user | test) = P(-user) * P(test | -user) / P(test)
+                    = (0.911 * 0.02) / (0.99 + 0.02)
+                    = 0.018
+    P(User | test) = < (0.087 / (0.087 + 0.018)), (0.018 / (0.087 + 0.018)) >
+                   = < 0.829, 0.171 >
+
+
+
+
+
+
+
+2. Breast cancer
+
+P(Cancer | test) = <P(cancer | test), P(-cancer | test)>
+
+    P(cancer | test) = P(cancer) * P(test | cancer) / P(test)
+                     = (0.01 * 0.8) / (0.8 + 0.096)
+                     = 0.009
+    P(-cancer | test) = P(-cancer) * P(test | -cancer) / P(test)
+                      = (0.99 * 0.096) / (0.8 + 0.096)
+                      = 0.106
+    P(User | test) = < (0.009 / (0.009 + 0.106)), (0.106 / (0.009 + 0.106)) >
+                   = < 0.078, 0.922 >

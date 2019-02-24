@@ -1,5 +1,5 @@
 """
-This program shows the path way of
+This program shows the shortes path way starting and ending at the same city 
 """
 from tools.aima.search import Problem, hill_climbing, simulated_annealing, \
     exp_schedule, genetic_search

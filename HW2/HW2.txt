@@ -22,7 +22,7 @@ The number of independent values in the Bayesian network for this domain
 
 
 
-"hand-written" work 
+Hand-worked
 
 i. P(Cloudy) = <0.5, 0.5>
 ii. P(Sprinker | cloudy) = <0.1, 0.9>

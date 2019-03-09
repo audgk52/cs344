@@ -1,3 +1,7 @@
+'''
+This is a program to calculate the probability of each combination of weather conditions
+'''
+
 from tools.aima.probability import BayesNet, enumeration_ask, elimination_ask
 
 # Utility variables

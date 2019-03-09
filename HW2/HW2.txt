@@ -2,3 +2,15 @@ Problem 1
 
 Graham argues that this is a Baysian approach to SPAM. What makes it Bayesian?
 
+
+Problem 2
+
+part b. 
+the number of independent values in the full joint probability distribution for this domain
+-> 2^4 = 16
+
+part c.
+The number of independent values in the Bayesian network for this domain
+-> 9, counting connected bayesian networks shown in the figure 
+
+

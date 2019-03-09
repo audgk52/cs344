@@ -1,3 +1,28 @@
-Myungha Kim & Sarah Samuel
-
-1. 
+Total : 12
+                   / stay : 5
+Hungry -- yes : 7
+                   \ not stay: 2
+                     
+                     
+                   / stay : 5
+       -- no: 5    
+                   \ not stay: 4
+                   
+                 
+                 
+Gain(A) = Entropy(A) - Remainder(A)
+Entropy = -sum(n, i = 1)  vi * log2(vi)
+Entropy(Hungry) = 1
+Gain(Hungry) = 1 - Remainder(Hungry)
+             = 1 - Sum(d, i = 1)(pi + ni) / (p + n) * Entropy(pi / (pi + ni), ni / (pi + ni))                  
+                                            stay              not stay   
+                         = 1 - [7/12 * - (5/7 * lg(5/7) + (2/7 * lg(2/7)] +     -> hungry
+                               [5/12 * - (1/5 * lg(1/5) + (4/5 * lg(4/5)]       -> not hungry 
+                         = 1 -0.8043
+                         = 0.1957 bits
+                         
+Thus, information gain from Hungry? question is not as good as the information gain from Patrons? question, 0.54 bits, but better than
+gain from Type? question, 0.0 bits. 
+                         
+                             
+                   

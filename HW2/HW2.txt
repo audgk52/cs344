@@ -1,0 +1,4 @@
+Problem 1
+
+Graham argues that this is a Baysian approach to SPAM. What makes it Bayesian?
+

@@ -4,6 +4,10 @@ Submit solutions to tasks 1–5.
   
   Task #1
   
+  Max and min value (15000 and 500000) from median_house_value seem like it is fixed artificially. Also, rooms per person value
+  showing 55.2 (training dataset) and 18.3 (validation dataset) seems odd (altohought there might be a house with a lot of rooms
+  where only one person lived). 
+  
   Task #2
   
   The distribution of training and validation data are quite off (which they should be similar). As the biggest problem in the plot
@@ -145,6 +149,26 @@ Submit solutions to tasks 1–5.
   
   Task #5
   
+  california_housing_test_data = pd.read_csv("https://download.mlcc.google.com/mledu-datasets/california_housing_test.csv", sep=",")
+
+  test_examples = preprocess_features(california_housing_test_data)
+  test_targets = preprocess_targets(california_housing_test_data)
+
+  predict_test_input_fn = lambda: my_input_fn(
+        test_examples, 
+        test_targets["median_house_value"], 
+        num_epochs=1, 
+        shuffle=False)
+
+  test_predictions = linear_regressor.predict(input_fn=predict_test_input_fn)
+  test_predictions = np.array([item['predictions'][0] for item in test_predictions])
+
+  root_mean_squared_error = math.sqrt(
+      metrics.mean_squared_error(test_predictions, test_targets))
+
+  print("Final RMSE (on test data): %0.2f" % root_mean_squared_error)
+
+  Final RMSE (on test data): 160.75
   
   
   

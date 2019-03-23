@@ -1,0 +1,35 @@
+Questions:
+
+Compare and contrast categorical vs numerical data
+
+      Categorical data is textual, represent characteristics, which can't translated into a nummerical value. It does not have logical oreder. It only can 
+      be used with mode. Examples would be party affiliation (Republican, Democrat, Independent, etc), hair color (blond, black,
+      brunette, etc), race (Asian, Latino, etc)
+      
+      Numerical data has meaning as a measurement, such as a person's height, weight, or a count, such as how many textbooks one needs
+      for a semester, how many papers one has to write for a week, etc. It can be ordered, and further broken into two types: discrete
+      and continuous data. Discrete represents data that can be counted (possible values can be listed out) while continuous 
+      represents measurements (possible values can't be counted and only can be described using intervals on the real number line). 
+      
+      
+Submit solutions to tasks 1–2. Include your best hyper-parameter values and the resulting RMSE, but not the training output.
+
+      Task #1
+      train_model(
+          learning_rate=0.00004,
+          steps=400,
+          batch_size=4
+      )
+      
+      Task #2
+      
+      
+What are the hyper-parameters learned in these exercises and is there a “standard” tuning algorithm for them?
+      
+      Effects of different hyperparameters are data dependent, which means different combinations have to be tested on different 
+      dataset. Training error manipulated by hyperparemeters should have steady decrease with the sahpe of steep slope at first and
+      plateau as it goes. Manipulating learning rate changes the speed of decrease in training error. Lower learning rate with larger
+      steps or batch size is a rule of thumbs. Small batch size often create instability as well so adjusting from larger values to
+      smaller values is desirable to see degradation. 
+      
+      

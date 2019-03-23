@@ -21,6 +21,30 @@ Submit solutions to tasks 1–3.
       
       Task #3
       
+      california_housing_dataframe["rooms_per_person"] = (
+        california_housing_dataframe["rooms_per_person"].apply(lambda x: min(x, 4))
+      )
+      california_housing_dataframe["rooms_per_person"].hist()
+      plt.scatter(calibration_data["predictions"], calibration_data["targets"])
+      
+      calibration_data = train_model(
+          learning_rate=0.00005,
+          steps=500,
+          batch_size=5,
+          input_feature="rooms_per_person"
+
+
       
 What is the purpose of introducing synthetic features?
+
+      The purpose of introducing synthetic features is that combinations of features can provide better predictive abilities 
+      beyond what those feautres can provide individually. Thus, for the example with california_housing_dataframe, we created
+      a synthetic feature of rooms_per_person in addition to the existing features, total_rooms and population to figure out the 
+      ratio in case one city block is more densely populated than another. 
+      
 What are outliers and what is typically done with them?
+
+      When we create a scatter plot of preditions vs. target, outliers are the data points that are not fitted on a correlated
+      diagonal line. Typically, clipping is done with outliers to improve the model fit by setting reasonable minimum or maximum
+      values. 
+      

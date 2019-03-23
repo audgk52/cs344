@@ -38,6 +38,26 @@ Submit solutions to tasks 1–2. Include your best hyper-parameter values and th
       
       Task #2
       
+      train_model(
+        learning_rate = 0.00002,
+        steps = 1000,
+        batch_size = 10,
+        input_feature = "population"
+      )
+      
+      RMSE (on training data):
+        period 00 : 225.63
+        period 01 : 214.62
+        period 02 : 204.86
+        period 03 : 196.42
+        period 04 : 189.52
+        period 05 : 183.91
+        period 06 : 180.26
+        period 07 : 178.24
+        period 08 : 176.70
+        period 09 : 176.04
+        
+      Final RMSE (on training data): 176.04
       
       
       

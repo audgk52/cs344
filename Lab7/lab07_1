@@ -1,0 +1,23 @@
+Questions:
+
+Submit your solutions to exercises 1–2.
+
+      Exercise #1
+
+      cities['named after a saint & greater than 50 square miles'] = (cities['Area square miles'] > 50) & cities['City name'].apply(lambda name: name.startswith('San'))
+      cities
+
+      Exercise #2
+
+      cities.reindex([1, 2, 3, 4])
+
+Why would one use Pandas rather than the standard data manipulation features provided by NumPy?
+      
+      Pandas is a Data manipulation using Pandas is more straightforward. With the tabluar data with rows and columns, Pandas, which 
+      is column-oriented data analysis API, can handle the input data better. Also, most of the data manupulating and analysing features
+      provided are comprehensive.
+      
+Under what circumstances would it be useful to reorder/shuffle a Pandas DataFrame?
+    
+      It would be useful to reorder/shuffle a Pandas DataFrams to sanitize the input by allowing "missign" indices. 
+      

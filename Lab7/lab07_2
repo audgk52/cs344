@@ -21,7 +21,24 @@ Submit solutions to tasks 1–2. Include your best hyper-parameter values and th
           batch_size=4
       )
       
+      RMSE (on training data):
+        period 00 : 226.79
+        period 01 : 216.60
+        period 02 : 207.06
+        period 03 : 198.82
+        period 04 : 191.32
+        period 05 : 185.07
+        period 06 : 180.00
+        period 07 : 176.67
+        period 08 : 173.47
+        period 09 : 171.07
+        
+        Final RMSE (on training data): 171.07
+
+      
       Task #2
+      
+      
       
       
 What are the hyper-parameters learned in these exercises and is there a “standard” tuning algorithm for them?

@@ -176,9 +176,9 @@ Submit solutions to tasks 1–5.
   
 Give a one-paragraph summary of what you learned about using training, validation and testing datasets.
 
-  Using training, valudation adn testing datasets improves the accuracy of data represetation. First, choosing larger randomized
-  (so that we don't get sorted data which can create incorrect data representation)portion of data from a dataset to create the 
-  training set and choosing smaller randomized portion of data to create validation dataset can let us compare those two sets of 
-  data which should be roughly equal. After comparing training and validation dataset with many iteration, we compare it with 
-  test dataset to see if there is an overfit. 
+  Using training dataset is to figure out the trend of the values with the known values, and using validation dataset is to 
+  predict the values according to the trend found with the training dataset. Those two sets of data should be roughly equal. 
+  When comparing two datasets, randomization (shuffling) is required otherwise the result would be based on the sorted data.
+  Testing dataset uses entire original dataset to predict the values instead of using portions of it. Comparing RMSE for all 
+  three dataset, we can tell if the model is overfitting or not. 
   

@@ -3,9 +3,10 @@ and explain why it makes sense.
 
 Pearson correlation coefficine is a measure of the linear correlation between two variables X and Y (the covariance of the two
 variables divided by the product of their standard deviations). In this case, Pearson correlation measures the correlations 
-among features in the California housing dataset. For instance, correlation between population and total_bedrooms is 0.9 which 
-indicates fairly high positive correlation. This does make sense since as the population goes up, a number of total bedroom should
-increase alongside to meet the demand (positive correlation)  
+among features as well as between target (median_house_value) and other features in the California housing dataset. 
+For instance, correlation between population and total_bedrooms is 0.9 which indicates fairly high positive correlation. 
+This does make sense since as the population goes up, a number of total bedroom should increase alongside to meet the demand 
+(positive correlation).  
 
 
 b. Submit your solutions to tasks 1–2. Include the features you selected for task 1 and the synthetic features you developed 

@@ -1,7 +1,8 @@
 a. They recommend FTRL for L1 optimization, but the code specifies the same rate (learning_rate) for all runs. 
 How is FTRL managing the learning rate?
 
-
+FTRL is managing the learning rate by clipping gradients by norm (which normalizes my_optimizer so that its L2-norm is less 
+than or equal to clip_norm which is set here as 5.0) before applying gradients iwth an optimizer.
 
 b. What good does the bucketing/binning do?
 

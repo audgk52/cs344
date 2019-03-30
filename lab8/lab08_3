@@ -34,3 +34,5 @@ Yes I do agree with preference over smaller networks for smaller datasets. It is
 in the amoung of data required and the size of the model, in which size of networks. If you have large dataset, you need a large
 networks that can capture relations in the data along with specifics of the problme. In addition, problem complexity is 
 another factor to determine the size networks (as well as the size of data).  
+
+reference: https://medium.com/nanonets/nanonets-how-to-use-deep-learning-when-you-have-limited-data-f68c0b512cab

@@ -1,0 +1,61 @@
+a. What does the Pearson correlation coefficient measure? Identify one example value from the correlation table you compute 
+and explain why it makes sense.
+
+Pearson correlation coefficine is a measure of the linear correlation between two variables X and Y (the covariance of the two
+variables divided by the product of their standard deviations). In this case, Pearson correlation measures the correlations 
+among features in the California housing dataset. For instance, correlation between population and total_bedrooms is 0.9 which 
+indicates fairly high positive correlation. This does make sense since as the population goes up, a number of total bedroom should
+increase alongside to meet the demand (positive correlation)  
+
+
+b. Submit your solutions to tasks 1–2. Include the features you selected for task 1 and the synthetic features you developed 
+for task 2; include the final RMS errors but not the training output. Did you beat the Google-provided baselines?
+
+#task 1
+      minimal_features = [
+        "housing_median_age",
+        "latitude",
+     ]
+
+    assert minimal_features, "You must select at least one feature!"
+
+    minimal_training_examples = training_examples[minimal_features]
+    minimal_validation_examples = validation_examples[minimal_features]
+
+    train_model(
+        learning_rate=0.01,
+        steps=500,
+        batch_size=5,
+        training_examples=minimal_training_examples,
+        training_targets=training_targets,
+        validation_examples=minimal_validation_examples,
+        validation_targets=validation_targets)
+
+    Final RMSE: 118.11
+    
+#task 2
+    def creating_synthetic_features(source_df):
+      latitudes = zip(range(32, 50), range(32, 50))
+      selected_examples = pd.DataFrame()
+      selected_examples["median_income"] = source_df["median_income"]
+      for i in latitudes:
+        selected_examples["latitutde_%d_to_%d" % i] = source_df["latitude"].apply(
+        lambda l: 1.0 if l >= i[0] and l < i[1] else 0.0
+        )
+      return selected_examples
+
+    selected_training_examples = creating_synthetic_features(training_examples)
+    selected_validation_examples = creating_synthetic_features(validation_examples)
+
+    _ = train_model(
+        learning_rate=0.01,
+        steps=500,
+        batch_size=5,
+        training_examples=selected_training_examples,
+        training_targets=training_targets,
+        validation_examples=selected_validation_examples,
+        validation_targets=validation_targets)
+
+      Final RMSE: period 09 : 140.15
+      
+      No I didn't. 

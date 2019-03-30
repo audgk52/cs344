@@ -1,0 +1,36 @@
+a. Compare and contrast Seaborn vs. MatPlotLib.
+
+Both are data visualization libraries, but Seaborn is built on top of MatPlotLib and offers more sophiscated visualizations
+than ones given by MatPlotLib ("bare bones" visualization). Seaborn is a compliment to MatPlotLib. 
+
+b. How big is this dataset and does it seem of an appropriate size for this problem?
+
+The dataset has 397 rows of data (data ofo 397 automobiles) of description of many automobiles from late-1970s and early 1980s. 
+397 rows of data does not seem of an appropriate size for this problem of predicting the fuel efficiency of automobiles 
+from this time period. It seems to be quite small.  
+
+
+c. Explain what the prescribed normalization of the data does.
+
+  def norm(x):
+    return (x - train_stats['mean']) / train_stats['std']
+  normed_train_data = norm(train_dataset)
+  normed_test_data = norm(test_dataset)
+
+norm function returns x value takes two inputs, mean and standard deviation, and returns the value of 
+x - mean of train_dataset divided by standard deviation of train_dataset (train_dataset is random 80 percent of the entire dataset). 
+This norm function is applied to both train_dataset and test_dataset to normalize the scales and ranges for easier training and
+better regression model (independent result on the choice of units used in the input).
+
+
+d. Is this an example of a linear regression model?
+
+This is an example of a linear regression model with reasonably good prediction. 
+
+
+e. In their conclusion, they claim that smaller datasets “prefer” smaller networks. Do you agree? Explain your answer.
+
+Yes I do agree with preference over smaller networks for smaller datasets. It is said that there is almost linear relationship
+in the amoung of data required and the size of the model, in which size of networks. If you have large dataset, you need a large
+networks that can capture relations in the data along with specifics of the problme. In addition, problem complexity is 
+another factor to determine the size networks (as well as the size of data).  

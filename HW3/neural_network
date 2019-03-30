@@ -1,0 +1,15 @@
+1. In class, we attempted to create by hand a neural network that computes the XOR function. If this was possible, see if you 
+can simplify the network we built. If it was not possible, give a full explanation why it can’t be done.
+
+It is impossible to create a neural network that computes the XOR function with a single-layered network since it does not have an
+activation function. XOR function is not a linearly seperated function which will output "AND" result (an XOR function returns
+a true value if the two inputs are not equal and a false value if they are equal). 
+
+In order to make it possible to compute the XOR function, either an activation function should be used to add another layer to 
+the network (hidden layer; more complecated one that takes error into account) which can take any number of units in its input, 
+hidden and output layers (eventually gives the capability of achieving non-linear separation to the network), or backpropagation 
+(running forward and back propagation for numerous times on each input combination until the network can accurately predict the 
+expected output of the possible inputs) can be used. 
+
+
+

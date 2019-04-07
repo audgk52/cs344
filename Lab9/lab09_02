@@ -10,7 +10,7 @@ L1 regularization increases sparsity by encouraging weights to be exactly zero w
 at all. 
 
 
-
 c. Task 1: Here, just report the best log loss value / model size you can get and what gamma value you used to get them.
+  
   
   

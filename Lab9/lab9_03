@@ -1,0 +1,39 @@
+a. Exercise 1:
+  i. What’s the size of the cats/dogs datasets?
+    
+    2,000 JPG pictures for this exercise out of 25000 images of cats and dogs
+    total training cat images: 1000
+    total training dog images: 1000
+    total validation cat images: 500
+    total validation dog images: 500
+    
+  ii. How does the first convnet compare with the one we did in class.
+  
+    The first convnet of this exercise gives 0.7150 accuracy and 1.6745 loss on the validation set while the model from the
+    class gives 0.9916 accuracy on testing set. Convnet from the exercise has more epoch, complete presentation of the dataset 
+    to be learned, and more convolutional layers. 
+    
+  iii. Can you see any interesting patterns in the intermediate representations?
+    
+    As it goes through more layers, the images become more unrecognizable (abstract and compact) starting from the max_pooling2d_4.
+    
+    
+Exercise 2:
+  i. What is data augmentation?
+     
+     Data augumentation is a way to avoid overfitting for computer vision model by directly augmenting the input data to the model
+     in data space. 
+     
+  ii. Report your best results and the hyperparameters you used to get them.
+    
+    history = model.fit_generator(
+      train_generator,
+      steps_per_epoch=100,
+      epochs=30,
+      validation_data=validation_generator,
+      validation_steps=50,
+      verbose=2)
+      
+      
+    
+You can skip Exercise 3.

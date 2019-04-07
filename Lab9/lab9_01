@@ -18,4 +18,22 @@ c. Task 2: Explain how the logistic regression fares compared to the linear regr
 
 d. Task 3: Here, just report the best values you can achieve for AUC/accuracy and what hyperparameters you used to get them.
   
+  # TUNE THE SETTINGS BELOW TO IMPROVE AUC
+  linear_classifier = train_linear_classifier_model(
+      learning_rate=0.000004,
+      steps=50000,
+      batch_size=500,
+      training_examples=training_examples,
+      training_targets=training_targets,
+      validation_examples=validation_examples,
+      validation_targets=validation_targets)
+
+  evaluation_metrics = linear_classifier.evaluate(input_fn=predict_validation_input_fn)
+
+  print("AUC on the validation set: %0.2f" % evaluation_metrics['auc'])
+  print("Accuracy on the validation set: %0.2f" % evaluation_metrics['accuracy'])
+
+  LogLoss: 0.46
+  AUC on the validation set: 0.81
+  Accuracy on the validation set: 0.80
   

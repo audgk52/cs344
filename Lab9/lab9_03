@@ -34,6 +34,8 @@ Exercise 2:
       validation_steps=50,
       verbose=2)
       
+      val_loss: 0.5236 - val_acc: 0.7510
+      
       
     
 You can skip Exercise 3.

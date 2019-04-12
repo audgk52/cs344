@@ -1,0 +1,28 @@
+1. Speculate on whether you believe that so-called “deep” neural networks are destined to be another bust just as perceptrons
+and expert systems were in the past, or whether they really are a breakthrough that will be used for years into the future. 
+Please give a two-to-three-paragraph answer, including examples to back up your argument.
+
+
+First to mention the difference between deep neural networks and expert systmes, expert systems require manually created database
+for rules in text form--which can be tedious process--while neural networks creates their own rules which are represented as
+weights between points on a grid via training by the input data.  
+
+Neural networks has their advantages with dealing with uncertainty and sophisticated pattern recognition. For instance, to 
+answer the questions auch as "what will the weather be like tomorrow?", expert systems would need to go through endless amount
+of values and writing out rules on how to answer the question which is virtually impossible (expert systems cannot handle time).
+On the other hand, neural networks will compute the answer as they are a series of stacked regression equations. 
+
+However, neural networks have its weakness at explaining for the conclusions they make. Neural networks are called "black box" 
+once they are trained, difficult to interpret what model has learned due to difficulty of understanding the relationship between
+the representations learned at each layer.
+
+It is hard to say that it will be whether another bust just as perceptrosn and expert systems or a real breakthough for the future
+at this point. However, as we have seen the pattern of shifting in trends from GOFAI, Bayesian statisitics, machine learning 
+to neural networks, where all those algorithms developed as the complementories for the problems of the past ones, I believe there
+will be another set of algorithms in the future compensating the problem of neural networks in different perspectives coming up
+with different answers. 
+
+
+Sources 
+https://www.quora.com/What-are-the-differences-between-expert-systems-and-artificial-neural-networks
+https://www.quora.com/What-are-the-advantages-disadvantages-of-Artificial-Neural-networks

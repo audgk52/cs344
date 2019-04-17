@@ -1,0 +1,16 @@
+1. Would you rather use TensorFlow or Keras to build your models?
+
+    I would rather use Keras to build my models since it is:
+    i) user friendly - Keras follows best practices for reducing cognitive load via offering consistent and simple APIs and 
+    minimizing the number of user actions. 
+    ii) Modularity - Keras allows us to combine neural layers, cost functions, optimizers, initialization scheme, activation
+    functions and regularization schemes to create new model.
+    iii) Easy extensibility - it is easy to add new modules (as new classes and functions) which can make Keras suitable for 
+    advanced research.
+    Keras, in general, is a high-level neural networks API developed with a focus on enabling fast experimentation and less
+    detailed work required from the user side so I would rather use Keras over TensorFlow to build my models. 
+    
+    
+2. Tasks 1 & 2: Report your best hyper-parameter settings and their resulting performance on the testing dataset.
+    
+    

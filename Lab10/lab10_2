@@ -1,0 +1,9 @@
+1. What does AdaGrad do to boost performance?
+
+    Adagrad is one of the optimizers that modifies the learning rate adaptively for each coefficient in a model, monotonically 
+    lowering the effective learning rate. It adapts the learning rate to the parameters, performing smaller updates for paremeters
+    associated with frequently occurring features, and larger updates for parameters associated with infrequent features which
+    makes it suitable for dealing with sparse data. It is useful for convex problems Neural Net training.
+    
+    
+2. Tasks 1–4: Report your best hyperparameter settings and their resulting performance.

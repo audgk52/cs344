@@ -1,5 +1,6 @@
 Task 1: Is a linear model ever preferable to a deep NN model?
 
+  It might be able to used for building the 
   
 Task 2: Does the NN model do better than the linear model?
 Task 3: Do embeddings do much good for sentiment analysis tasks?

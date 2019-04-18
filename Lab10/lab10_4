@@ -1,8 +1,101 @@
 Task 1: Is a linear model ever preferable to a deep NN model?
-
-  It might be able to used for building the 
   
+  It can be preferable to be used for building the basic model that can comput linear relationship output with faster speed. But 
+  once one needs to build more complex deep NN model which can produce non-linear relationship output, it is not preferable to use
+  a linear model. For this case, linear model seems like it can be preferable with it fast processing speed with fairly good results. 
+  
+  Training set metrics:
+    loss 11.265644
+    accuracy_baseline 0.5
+    global_step 1000
+    recall 0.81472
+    auc 0.8718747
+    prediction/mean 0.49214765
+    precision 0.7729205
+    label/mean 0.5
+    average_loss 0.45062578
+    auc_precision_recall 0.86332893
+    accuracy 0.78768
+    ---
+    Test set metrics:
+    loss 11.308346
+    accuracy_baseline 0.5
+    global_step 1000
+    recall 0.80656
+    auc 0.869652
+    prediction/mean 0.49046448
+    precision 0.7717391
+    label/mean 0.5
+    average_loss 0.45233384
+    auc_precision_recall 0.86046344
+    accuracy 0.784
+
 Task 2: Does the NN model do better than the linear model?
+
+  From the result, DNN model does better job at training the model, but once it comes to the testing, it does poorer job than the linear
+  model, which means that predictions made by the model does not match up the actual data (testing set) well. DNN model shows accuracy 
+  of 0.8 and loss of 9.64416 for training set metrics and accuracy of 0.72 and loss of 15.369877 for test set metrics.  
+  
+  Training set metrics:
+    loss 9.64416
+    accuracy_baseline 0.6
+    global_step 1000
+    recall 0.8
+    auc 0.8999999
+    prediction/mean 0.54547423
+    precision 0.85714287
+    label/mean 0.6
+    average_loss 0.38576642
+    auc_precision_recall 0.93358845
+    accuracy 0.8
+    ---
+    Test set metrics:
+    loss 15.369877
+    accuracy_baseline 0.6
+    global_step 1000
+    recall 0.8
+    auc 0.78
+    prediction/mean 0.51035154
+    precision 0.61538464
+    label/mean 0.4
+    average_loss 0.6147951
+    auc_precision_recall 0.67973155
+    accuracy 0.72
+
+  
 Task 3: Do embeddings do much good for sentiment analysis tasks?
+
+  Embeddings does much good for sentiment anaylsis tasks (fairly good result for testing set for this case) since embeddings is
+  usually computationally most efficient option to use for training a model on sparse data which data for sentiment analysis would
+  be where it needs to figure out opinion expressed in text data.
+  
+  Training set metrics:
+    loss 11.417532
+    accuracy_baseline 0.5
+    global_step 1000
+    recall 0.76216
+    auc 0.86847484
+    prediction/mean 0.4649452
+    precision 0.7984412
+    label/mean 0.5
+    average_loss 0.45670128
+    auc_precision_recall 0.8557686
+    accuracy 0.78488
+    ---
+    Test set metrics:
+    loss 11.442855
+    accuracy_baseline 0.5
+    global_step 1000
+    recall 0.75344
+    auc 0.86752856
+    prediction/mean 0.46456173
+    precision 0.795977
+    label/mean 0.5
+    average_loss 0.45771417
+    auc_precision_recall 0.8544339
+    accuracy 0.78016
+
+ 
+  
 Tasks 4–5: Name two words that have similar embeddings and explain why that makes sense.
 Task 6: Report your best hyper-parameters and their resulting performance.

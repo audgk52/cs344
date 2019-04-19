@@ -98,4 +98,47 @@ Task 3: Do embeddings do much good for sentiment analysis tasks?
  
   
 Tasks 4–5: Name two words that have similar embeddings and explain why that makes sense.
+
+    "disappointment" and "disappointing" would have similar embeddings since those two words are distinguishable enough and are 
+    used in the similar context (negative).
+    
+    
 Task 6: Report your best hyper-parameters and their resulting performance.
+  
+  my_optimizer = tf.train.AdamOptimizer(learning_rate=0.05)
+  my_optimizer = tf.contrib.estimator.clip_gradients_by_norm(my_optimizer, 20.0)
+
+  classifier = tf.estimator.DNNClassifier(
+    feature_columns=feature_columns,
+    hidden_units=[10,20],
+    optimizer=my_optimizer
+  )
+  
+  Training set metrics:
+  loss 3.774578
+  accuracy_baseline 0.5
+  global_step 1000
+  recall 0.96344
+  auc 0.98952013
+  prediction/mean 0.51663756
+  precision 0.9520158
+  label/mean 0.5
+  average_loss 0.15098312
+  auc_precision_recall 0.98977315
+  accuracy 0.95744
+  ---
+  Test set metrics:
+  loss 7.3603535
+  accuracy_baseline 0.5
+  global_step 1000
+  recall 0.88464
+  auc 0.9480796
+  prediction/mean 0.50824857
+  precision 0.879224
+  label/mean 0.5
+  average_loss 0.29441413
+  auc_precision_recall 0.9449766
+  accuracy 0.88156
+  ---
+
+

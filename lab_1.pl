@@ -1,5 +1,5 @@
 %a.
-#Exercise 1.4
+%Exercise 1.4
 
 
 
@@ -76,17 +76,36 @@ hasBroom(X):-  quidditchPlayer(X).
 
 
 
-
+%b.
 %Consider the well-known modus ponens. Does Prolog implement a version of modus ponens in propositional logic form? 
 %If so, demonstrate how it’s done; if not, explain why not. If it doesn’t, can you implement one? Why or why not?
 
 % modus ponens = 
     % p -> q 
-    % p 
-    % therefore q
+    % p is true
+    % therefore q must be true
+% Yes, Prolog implements modus ponens with :- (if)
+q :- p.
+p.
+% ?- q. then the output would be "yes" 
 
-Prolog supports representations in the form of Horn clauses. Compare and contrast the representational power they provide
-with that of propositional logic.
 
-Logical implementations generally distinguish the basic operations of TELL and ASK. Does Prolog support this distinction?
+
+%c. 
+%Prolog supports representations in the form of Horn clauses. Compare and contrast the representational power they provide
+%with that of propositional logic.
+
+%Horn clauses provides the representational power in terms of describing relations between terms, while propositional provides 
+%power as concisly denoting truth of the term. 
+
+
+
+
+
+%d. 
+%Logical implementations generally distinguish the basic operations of TELL and ASK. Does Prolog support this distinction?
 If so, how; if not, why not?
+
+%Yes, Prolog support the distinction between TELL and ASK. For instance, we can ask Prolog whether Mia plays air guitar
+%?- playAirGuitar(mia). We can tell Prolog which of the individuals Prolog knows about is a woman by ?- woman(X). Thus, it becomes 
+%'asking' if we pose query with atom, and it becomes 'telling' if we pose query with variable. 

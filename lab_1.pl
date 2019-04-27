@@ -104,7 +104,7 @@ p.
 
 %d. 
 %Logical implementations generally distinguish the basic operations of TELL and ASK. Does Prolog support this distinction?
-If so, how; if not, why not?
+%If so, how; if not, why not?
 
 %Yes, Prolog support the distinction between TELL and ASK. For instance, we can ask Prolog whether Mia plays air guitar
 %?- playAirGuitar(mia). We can tell Prolog which of the individuals Prolog knows about is a woman by ?- woman(X). Thus, it becomes 

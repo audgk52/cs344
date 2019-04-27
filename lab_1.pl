@@ -2,11 +2,11 @@
 
 
 
-killer(butch)
+killer(butch).
 %gave property 'killer' to the name 'butch' = butch is a killer
 
 
-married(mia, marsellus)
+married(mia, marsellus).
 %gave property 'married' to the names 'Mia' and (,) Marcellus = Mia and Marcellus are married
 
 dead(zed)
@@ -14,14 +14,14 @@ dead(zed)
 
 
 kill(marsellus,X):-
-    footmassage(X, mia)
+    footmassage(X, mia).
 %gave property 'kill' to the name 'Marsellus' and variable 'X' followed by rule 'if' (:-).
 %And for the rule, I gave property 'footmassage' to the name 'Mia' by variable 'X'
 %= Marsellus kills X (can be anyone) if X gives footmassage to mia.
 
 
 loves(mia,Y):-
-    goodDancer(Y)
+    goodDancer(Y).
 %gave property 'love' to the name 'Mia' and variable 'Y' followed by rule 'if' (:-).
 %And for the rule, i gave property 'Good Dancer' to variable 'Y'.
 %= Mia loves Y (can be anyone) if Y is a good dancer.
@@ -29,7 +29,7 @@ loves(mia,Y):-
 
 eats(Jules,Z):-
     nutritious(Z);
-    tasty(Z)
+    tasty(Z).
 %gave property 'eat' to the name 'Jules' and variable 'Z' followed by rule 'if' (:-).
 %#And for the rule, I gave property 'nutritious' or (;) 'tasty' to variable 'Z'.
 %= Jules eats Z (can be anything) if it is nutritious or tasty.

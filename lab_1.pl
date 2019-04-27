@@ -38,6 +38,14 @@ eats(Jules,Z):-
 
 
 %Exercise 1.5
+
+wizard(ron). 
+hasWand(harry). 
+quidditchPlayer(harry). 
+wizard(X):-  hasBroom(X),  hasWand(X). 
+hasBroom(X):-  quidditchPlayer(X).
+
+
 %1.Yes
 %wizard(ron) - stated as a fact in the knowledge base
 

@@ -9,7 +9,7 @@ killer(butch).
 married(mia, marsellus).
 %gave property 'married' to the names 'Mia' and (,) Marcellus = Mia and Marcellus are married
 
-dead(zed)
+dead(zed).
 %gave property 'dead' to the name 'Zed' = Zed is dead
 
 

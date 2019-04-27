@@ -3,34 +3,34 @@
 
 
 killer(butch)
-%I gave property 'killer' to the name 'butch' = butch is a killer
+%gave property 'killer' to the name 'butch' = butch is a killer
 
 
 married(mia, marsellus)
-%I gave property 'married' to the names 'Mia' and (,) Marcellus = Mia and Marcellus are married
+%gave property 'married' to the names 'Mia' and (,) Marcellus = Mia and Marcellus are married
 
 dead(zed)
-%I gave property 'dead' to the name 'Zed' = Zed is dead
+%gave property 'dead' to the name 'Zed' = Zed is dead
 
 
 kill(marsellus,X):-
     footmassage(X, mia)
-%For the head, I gave property 'kill' to the name 'Marsellus' and variable 'X' followed by rule 'if' (:-).
+%gave property 'kill' to the name 'Marsellus' and variable 'X' followed by rule 'if' (:-).
 %And for the rule, I gave property 'footmassage' to the name 'Mia' by variable 'X'
 %= Marsellus kills X (can be anyone) if X gives footmassage to mia.
 
 
 loves(mia,Y):-
     goodDancer(Y)
-%I gave property 'love' to the name 'Mia' and variable 'Y' followed by rule 'if' (:-).
+%gave property 'love' to the name 'Mia' and variable 'Y' followed by rule 'if' (:-).
 %And for the rule, i gave property 'Good Dancer' to variable 'Y'.
 %= Mia loves Y (can be anyone) if Y is a good dancer.
 
 
-eat(Jules,Z):-
+eats(Jules,Z):-
     nutritious(Z);
     tasty(Z)
-%I gave property 'eat' to the name 'Jules' and variable 'Z' followed by rule 'if' (:-).
+%gave property 'eat' to the name 'Jules' and variable 'Z' followed by rule 'if' (:-).
 %#And for the rule, I gave property 'nutritious' or (;) 'tasty' to variable 'Z'.
 %= Jules eats Z (can be anything) if it is nutritious or tasty.
 

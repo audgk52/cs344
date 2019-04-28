@@ -17,14 +17,14 @@ dead(zed).
 kill(marsellus,X):-
     footmassage(X, mia).
 %gave property 'kill' to the name 'Marsellus' and variable 'X' followed by rule 'if' (:-).
-%And for the rule, I gave property 'footmassage' to the name 'Mia' by variable 'X'
+%And for the body of the rule, I gave property 'footmassage' to the name 'Mia' by variable 'X'
 
 
 
 loves(mia,Y):-
     goodDancer(Y).
 %gave property 'love' to the name 'Mia' and variable 'Y' followed by rule 'if' (:-).
-%And for the rule, i gave property 'Good Dancer' to variable 'Y'.
+%And for the body of the rule, i gave property 'Good Dancer' to variable 'Y'.
 
 
 
@@ -32,7 +32,7 @@ eats(Jules,Z):-
     nutritious(Z);
     tasty(Z).
 %gave property 'eat' to the name 'Jules' and variable 'Z' followed by rule 'if' (:-).
-%#And for the rule, I gave property 'nutritious' or (;) 'tasty' to variable 'Z'.
+%#And for the body of the rule, I gave property 'nutritious' or (;) 'tasty' to variable 'Z'.
 
 
 

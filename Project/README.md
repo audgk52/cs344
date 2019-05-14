@@ -21,6 +21,6 @@ The codes are structured as following:
   - Model is evaluated to check the accuracy.
 
 Both datasets are taken from Kaggle. The followings are the links to external sources:
-IMDB: https://www.kaggle.com/iarunava/imdb-movie-reviews-dataset
-Rotten Tomatoes: https://www.kaggle.com/ynouri/rotten-tomatoes-sentiment-analysis/data
-Embeddings: https://nlp.stanford.edu/projects/glove/ 
+-IMDB: https://www.kaggle.com/iarunava/imdb-movie-reviews-dataset
+-Rotten Tomatoes: https://www.kaggle.com/ynouri/rotten-tomatoes-sentiment-analysis/data
+-Embeddings: https://nlp.stanford.edu/projects/glove/ 

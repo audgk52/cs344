@@ -24,3 +24,11 @@ Both datasets are taken from Kaggle. The followings are the links to external so
 - IMDB: https://www.kaggle.com/iarunava/imdb-movie-reviews-dataset
 - Rotten Tomatoes: https://www.kaggle.com/ynouri/rotten-tomatoes-sentiment-analysis/data
 - Embeddings: https://nlp.stanford.edu/projects/glove/ 
+
+Updates after Walkthrough: 
+
+I do not have a jupyter notebook file with the codes prior to the walkthrough since I made an update on top of the existing codes. 
+However, after walkthrough, I made an update by droping the Support Vector Machine and focusing on the Deep Neural Networks 
+(focused more on the comparison between different dataset rather than different models). Also, for the Rotten Tomatoes dataset, 
+I added different method of data refining along with assigning neutral values randomly to either positive or negative. In 
+addition, I modified the model via varying hyperparameters and the number of hidden units to improve the accuracy of prediction.
